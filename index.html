@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MarkItDown Converter</title>
+</head>
+<body>
+    <h1>MarkItDown Converter</h1>
+    
+    <section>
+        <h2>Convert Document to Markdown</h2>
+        
+        <div>
+            <label for="fileInput">Select file:</label>
+            <input type="file" id="fileInput" accept=".pdf,.docx,.pptx,.html,.txt,.xlsx,.csv,.json,.xml">
+            <button onclick="handleFileSelect()">Convert</button>
+        </div>
+    </section>
+
+    <section>
+        <h2>Output</h2>
+        <textarea id="output" rows="20" cols="80" readonly placeholder="Converted markdown will appear here..."></textarea>
+    </section>
+
+    <section>
+        <button onclick="copyToClipboard()">Copy to Clipboard</button>
+        <button onclick="downloadMarkdown()">Download as .md</button>
+        <button onclick="clearOutput()">Clear</button>
+    </section>
+
+    <section>
+        <h2>Info</h2>
+        <p>Supported formats: PDF, DOCX, PPTX, HTML, TXT, XLSX, CSV, JSON, XML</p>
+        <p>This tool uses MarkItDown to convert documents to markdown format.</p>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>
